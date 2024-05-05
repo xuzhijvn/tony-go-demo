@@ -1,0 +1,15 @@
+# dubbo client yaml configure file
+
+dubbo:
+  registries:
+    demoZK:
+      protocol: zookeeper
+      address: 127.0.0.1:2181
+  consumer:
+    references:
+      UserProvider:
+        protocol: dubbo
+        interface: com.tony.dubbogo.UserProvider
+  logger:
+    zap-config:
+      level: info
